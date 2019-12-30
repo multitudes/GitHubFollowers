@@ -13,6 +13,8 @@
 		45AFD29123BA18C000997133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AFD28F23BA18C000997133 /* LaunchScreen.storyboard */; };
 		45CA02F823BA38B5003FF383 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CA02F723BA38B5003FF383 /* SearchViewController.swift */; };
 		45CA02FA23BA3951003FF383 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CA02F923BA3951003FF383 /* FavouritesViewController.swift */; };
+		45CA02FC23BA4D65003FF383 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CA02FB23BA4D65003FF383 /* GFButton.swift */; };
+		45CA02FE23BA50F9003FF383 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CA02FD23BA50F9003FF383 /* GFTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		45AFD29223BA18C000997133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45CA02F723BA38B5003FF383 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		45CA02F923BA3951003FF383 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		45CA02FB23BA4D65003FF383 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		45CA02FD23BA50F9003FF383 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				45AFD28F23BA18C000997133 /* LaunchScreen.storyboard */,
 				45AFD29223BA18C000997133 /* Info.plist */,
 				45CA02F923BA3951003FF383 /* FavouritesViewController.swift */,
+				45CA02FB23BA4D65003FF383 /* GFButton.swift */,
+				45CA02FD23BA50F9003FF383 /* GFTextField.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45CA02FE23BA50F9003FF383 /* GFTextField.swift in Sources */,
 				45CA02FA23BA3951003FF383 /* FavouritesViewController.swift in Sources */,
+				45CA02FC23BA4D65003FF383 /* GFButton.swift in Sources */,
 				45AFD28523BA18BE00997133 /* AppDelegate.swift in Sources */,
 				45CA02F823BA38B5003FF383 /* SearchViewController.swift in Sources */,
 				45AFD28723BA18BE00997133 /* SceneDelegate.swift in Sources */,
