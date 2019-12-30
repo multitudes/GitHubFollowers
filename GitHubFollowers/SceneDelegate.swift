@@ -16,14 +16,49 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        // create a search nav cotroller
+        let searchNavigationController = UINavigationController(rootViewController: SearchViewController())
+        let favouritesNavigationController = UINavigationController(rootViewController: FavouritesViewController())
+        
+        
+        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         // view controller is the name of the class defined in ViewController.swift btw
-        window?.rootViewController = ViewController()
+        //UITabBarController is the container for my other views
+        window?.rootViewController = createTabBar()
         // this is what makes it and shows it
         window?.makeKeyAndVisible()
     }
 
+    // create nav controller
+    func createSearchNC()  -> UINavigationController {
+        let searchViewController = SearchViewController()
+        searchViewController.title = "Search"
+        searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        
+        return UINavigationController(rootViewController: searchViewController)
+    }
+    // create nav controller
+    func createFavouritesNC()  -> UINavigationController {
+        let favoritesViewController = FavouritesViewController()
+        favoritesViewController.title = "Favorites"
+        favoritesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        
+        return UINavigationController(rootViewController: favoritesViewController)
+    }
+    // create tabbar controller
+    func createTabBar() -> UITabBarController {
+        let tabBar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemGreen
+        tabBar.viewControllers = [createSearchNC(), createFavouritesNC()]
+        return tabBar
+    }
+    
+    
+    
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
