@@ -16,12 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
-        // create a search nav cotroller
-        let searchNavigationController = UINavigationController(rootViewController: SearchViewController())
-        let favouritesNavigationController = UINavigationController(rootViewController: FavouritesViewController())
-        
-        
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
@@ -41,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return UINavigationController(rootViewController: searchViewController)
     }
     // create nav controller
-    func createFavouritesNC()  -> UINavigationController {
+    func createFavoritesNC()  -> UINavigationController {
         let favoritesViewController = FavouritesViewController()
         favoritesViewController.title = "Favorites"
         favoritesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
@@ -52,7 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
         UITabBar.appearance().tintColor = .systemGreen
-        tabBar.viewControllers = [createSearchNC(), createFavouritesNC()]
+        tabBar.viewControllers = [createSearchNC(), createFavoritesNC()]
         return tabBar
     }
     
