@@ -13,7 +13,7 @@ class UserInfoVC: UIViewController {
     let headerView = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
-    var itemViews : [UIViews] = []
+    var itemViews : [UIView] = []
     var username: String!
     
     
@@ -54,20 +54,20 @@ class UserInfoVC: UIViewController {
         
         for itemView in itemViews {
         view.addSubview(itemView)
-       itemViewTwo.backgroundColor = .systemRed
-        itemViewTwo.backgroundColor = .systemblue
+        itemViewOne.backgroundColor = .systemRed
+        itemViewTwo.backgroundColor = .systemBlue
         itemView.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
                 itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-                itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: padding)
+                itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
             ])
          }
         
 
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180),
+            headerView.heightAnchor.constraint(equalToConstant: 200),
             
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
