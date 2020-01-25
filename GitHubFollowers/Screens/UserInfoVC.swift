@@ -39,6 +39,7 @@ class UserInfoVC: UIViewController {
                 case .success(let user):
                     DispatchQueue.main.async {
                         self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+                        
                     }
                     
                 case .failure(let error):
@@ -54,8 +55,7 @@ class UserInfoVC: UIViewController {
         
         for itemView in itemViews {
         view.addSubview(itemView)
-        itemViewOne.backgroundColor = .systemRed
-        itemViewTwo.backgroundColor = .systemBlue
+
         itemView.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
@@ -67,7 +67,7 @@ class UserInfoVC: UIViewController {
 
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 200),
+            headerView.heightAnchor.constraint(equalToConstant: 220),
             
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
